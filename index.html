@@ -1,0 +1,229 @@
+<!Doctype HTML>
+<html lang="en">
+<Head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="stylesheet" href="assets/fontawesome/css/all.css">
+     <title>Navigation Bar</title>
+     <style>
+           body{
+               font-family:'Open Sans', sans-serif;
+           }
+           *{
+               margin:0;
+               padding:0;
+               list-style:none;
+               text-decoration:none;
+           }
+
+           nav{
+                height:60px;
+                background:black;
+           }
+           nav img{
+                width:90px; 
+                position:absolute;
+                top:14px;
+                left:2%;
+           }
+           nav ul{float:right; 
+          margin-right:25px;}
+
+          nav ul li{
+               display:inline-block;
+               line-height: 55px;
+               margin:0 15px;
+          }
+
+          nav ul li a{
+                position:relative;
+                color:white;
+                font-size:18px;
+                padding:5px 0;
+          
+          }
+
+          ul li a.active,
+          ul li a:hover{color:aqua; }
+
+          label #btn,
+          label #cancel{
+               color:white;
+               font-size:20px;
+               float:left;
+               line-height:80px;
+               margin-left:20px;
+               cursor:pointer;
+               margin-top:-10px;
+               display:none;
+          }
+                  label #search{
+                     line-height:80px;
+                     font-size: 20px;
+                     margin-right:40px;
+                     margin-top:-10px;
+                  }
+          #check{
+               display:none;
+          }
+
+
+            #search{float:right; margin-left:130px; color:white;}
+          @media (max-width:1118px){
+               nav img{
+                    left:8%;
+               }
+          }
+
+          @media (max-width:944px){
+               nav img{
+                    left:37%;
+                    top:15px;
+                    width:95px;
+               }
+               nav ul li a{
+                    font-size:17px;
+               }
+          }
+
+          @media (max-width:860px){
+           label #btn{
+               display:block;
+               
+           }
+           ul{
+               position:fixed;
+               width:100%;
+               height:100vh;
+               background:#34495e;
+               top:60px;
+               left:-100%;
+               transition: all .5s;
+               text-align:center;
+           }
+           nav ul li{
+               display:block;
+               margin:20px 0;
+               line-height:30px;
+           }
+               nav ul li a{
+                    font-size:20px;
+               }
+               #check:checked ~ ul{
+                    left:0%;
+               }
+
+               #check:checked ~ label #btn{
+                     display:none;
+               }
+               #check:checked ~ label #cancel{
+                     display:block;
+               }
+          }
+          
+          
+          
+          .course-section{width:100%; min-height:75vh; background-color:white;font-family: 'Mouse Memoirs', sans-serif;}
+           .course-container{width:80%; display:block; margin:auto; padding-top:100px;}
+           .content-section{float:left; width:55%; margin-top:30px;}
+           .image-section{float:right; width:40%;}
+           .image-section img{width:100%; height:auto;}
+           .content-section .title{text-transform:uppercase; font-size:28px;}
+           .content-section .content h3{margin-top:20px; color:#5d5d5d; font-size:21px;}
+           .content-section .content p{margin-top:10px; font-family:sans-serif; font-size:18px; ;}
+           .content-section .content .button{margin-top:30px;}
+           .content-section .content .button a{background-color:#3d3d3d; padding:12px 40px; text-decoration:none; color:#fff; font-size:25px; letter-spacing:1.5px;}
+           .content-section .content .button a:hover{background-color:#a52a2a; color:#fff;}
+           .content-section .social{margin:40px 40px;}
+           .content-section .social i{color:#a52a2a;font-size:30px; padding:0px 10px;}
+           .content-section .social i:hover{color:#3d3d3d;}
+           @media screen and (max-width: 768px){
+	                                           .course-container{width:80%; display:block; margin:auto; padding-top:50px;}
+                                               .content-section{float:none; width:100%; display:block; margin:auto;}
+                                               .image-section{float:none; width:100%;}
+                                               .image-section img{width:100%; height:auto; display:block; margin:auto;}
+                                               .content-section .title{text-align:center; font-size:19px;}
+                                               .content-section .content .button{text-align:center;}
+                                               .content-section .content .button a{padding:9px 30px;}
+                                               .content-section .social{text-align:center;}
+     
+     </style>
+</Head>
+
+
+
+
+<Body>
+<Header>
+      <nav>
+           <input type="checkbox" id="check">
+           <label for="check">
+           <i class="fas fa-bars" id="btn"></i>
+           <i class="fas fa-times" id="cancel"></i>
+           <i class="fas fa-search" id="search"></i>
+           </label>
+           <img src="assets/logo.png" alt="logo">
+           <ul>
+           <li><a href="#" class="active">Home</a></li>
+           <li><a href="#">Courses</a></li>
+           <li><a href="#">Blogs</a></li>
+           <li><a href="#">Tools</a></li>
+           <li><a href="#">Projects</a></li>
+           <li><a href="#">Programming</a></li>
+           <li><a href="#">Forum</a></li>
+           <li><a href="#">Games</a></li>
+     
+           </ul>
+
+
+               
+               
+          
+      </nav> 
+      
+</Header> 
+
+
+<div class="course-section">                                                                       <!--------------Course Div----------------->
+  <div class="course-container">
+  <div class="content-section">
+  <div class="title">
+  <h1 style="text-decoration:underline">Courses</h1>
+
+
+  </div>
+  <div class="content">
+    <p>Learn the different tech,programming languages like c,cpp,java,web development,git,github and many more to grow your carrer in this digital world.</p>
+    <div class="button">
+<a href="enroll.html">Explore Courses</a>
+  </div>
+  </div>
+
+  </div><br>
+  <div class="image-section">
+  <img src="assets/coding.gif" style="border-radius:10px">
+  </div>
+  </div>
+   </div>
+
+  
+
+
+
+
+
+</Body>
+</HTML>
+
+
+
+
+
+
+
+
+
+
+
+
